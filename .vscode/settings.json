@@ -1,0 +1,18 @@
+{
+    //"java.configuration.updateBuildConfiguration": "interactive",
+    "jenkins-runner.jobs": {
+        "ide": {
+            "runWith": "pipelines-8080",
+            "name": "ide-springpetclinic",
+            "isDefault": true
+        }
+    },
+    "jenkins-runner.hostConfigs": {
+        "pipelines-8080": {
+            "url": "http://localhost:8080/",
+            "user": "jenkinsadmin",
+            "password": "xlt550Mummy1987@1",
+            "useCrumbIssue": true
+        }
+    }
+}

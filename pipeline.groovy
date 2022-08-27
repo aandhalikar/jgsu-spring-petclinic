@@ -1,6 +1,6 @@
 pipeline {
     agent any
-
+    triggers { pollSCM('* * * * *') }
     stages {
           stage('Checkout') {
             steps {
@@ -13,7 +13,7 @@ pipeline {
                 // Get some code from a GitHub repository
                 git branch: 'main', url: 'https://github.com/aandhalikar/jgsu-spring-petclinic.git'
 
-                // Run Maven on a Unix agent.
+              // Run Maven on a Unix agent.
                 sh './mvnw clean package'
 
                 // To run Maven on a Windows agent, use
